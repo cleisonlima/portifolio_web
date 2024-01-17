@@ -44,25 +44,41 @@
       </nav><!-- .navbar -->
 
     </div>
+
+    <style>
+      .fade-out {
+          opacity: 0;
+          transition: opacity 6s ease-out;
+      }
+  </style>
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <div id="hero" class="hero route bg-image" style="background-image:
-      url(assets/img/hero-bg.jpeg)">
+  <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/hero-bg.jpeg)">
     <div class="overlay-itro"></div>
     <div class="hero-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 class="hero-title mb-4">José Cleison de Lima</h1>
-          <h1 class =" hero-title2 mb-4 " > Desenvolvedor Full Stack </h1 >
-          <p class="hero-subtitle"><span class="typed"
-              data-typed-items="Python, Java (Estudando), Angular(Estudando), HTML5, JavaScript, Bootstrap, Git e GitHub, SQL, R, PowerBI, Excel, Linux, AWS"></span></p>
-          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+        <div class="table-cell">
+            <div class="container">
+                <!--<p class="display-6 color-d">Hello, world!</p>-->
+                <h1 class="hero-title mb-4">José Cleison de Lima</h1>
+                <h1 id="fadeHeading" class="hero-title2 mb-4 fade-out">Desenvolvedor Full Stack</h1>
+                <p class="hero-subtitle"><span class="typed"
+                    data-typed-items="Python, Java (Estudando), Angular(Estudando), HTML5, JavaScript, Bootstrap, Git e GitHub, SQL, R, PowerBI, Excel, Linux, AWS"></span></p>
+                <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+            </div>
         </div>
-      </div>
     </div>
-  </div><!-- End Hero Section -->
+</div><!-- End Hero Section -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var heading = document.getElementById("fadeHeading");
+
+        setTimeout(function () {
+            heading.classList.remove("fade-out");
+        }, 1000); // 1000 milissegundos = 1 segundo
+    });
+</script>
 
   <main id="main">
 
